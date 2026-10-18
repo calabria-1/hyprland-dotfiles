@@ -1,0 +1,7 @@
+{
+  "ecoMode": true,
+  "colorsPath": "~/.config/mozilla/firefox/matugen/firefox-colors.css",
+  "websitesDir": "~/.config/matugenfox/website-templates",
+  "browserThemeEnabled": true,
+  "webThemeEnabled": false
+}

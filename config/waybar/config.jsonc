@@ -1,0 +1,71 @@
+{
+    "output": ["eDP-1", "HDMI-A-1"],
+    "position": "top",
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "pulseaudio",
+        "custom/power-profile"
+    ],
+    "custom/arch": {
+        "format": "", 
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "active":"",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "HDMI-A-1": [ 1,2,3,4,5 ],
+            "eDP-1": [ 6,7,8,9,10 ]
+        }
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip": false
+    },
+    "network": {
+        "interval": 3,
+        "tooltip": false,
+        "format-wifi": "  {ipaddr}/{cidr}",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    }, 
+    "custom/power-profile": {
+    "exec": "~/.config/waybar/scripts/power-profile.sh",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "~/.config/rofi/custom-scripts/powermode-switcher.sh"
+    }
+
+}

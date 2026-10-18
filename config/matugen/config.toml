@@ -1,0 +1,103 @@
+[config]
+reload_apps = true
+
+[config.wallpaper]
+command = "sh -c 'awww img \"$1\" --transition-type random --transition-duration 2 && ln -sf \"$1\" \"$HOME/bilder/wallpaper/current\"' sh '{{ image }}'"
+set = true
+
+[templates.btop]
+input_path = "~/.config/matugen/templates/btop-colors.theme"
+output_path = "~/.config/btop/themes/matugen.theme"
+post_hook = "pkill -USR2 btop || true"
+
+[templates.cava]
+input_path = "~/.config/matugen/templates/cava-colors.ini"
+output_path = "~/.config/cava/themes/matugen"
+post_hook = "pkill -USR1 cava || true"
+
+[templates.firefox]
+input_path = "~/.config/matugen/templates/firefox-colors.css"
+output_path = "~/.config/mozilla/firefox/matugen/firefox-colors.css"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+post_hook = "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+post_hook = "~/.config/matugen/post-hook-scripts/update-gtk4-theme.sh && systemctl --user restart xdg-desktop-portal-gtk.service"
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland-colors.lua"
+output_path = "~/.config/hypr/modules/hyprland-colors.lua"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/themes/matugen.conf"
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.neovim]
+input_path = "~/.config/matugen/templates/neovim-colors.vim"
+output_path = "~/.config/nvim/colors/matugen.vim"
+post_hook = "pkill -SIGUSR1 nvim || true"
+
+[templates.obs]
+input_path = "~/.config/matugen/templates/obs-colors.obt"
+output_path = "~/.config/obs-studio/themes/matugen.obt"
+
+[templates.obsidian-notizen]
+input_path = "~/.config/matugen/templates/obsidian-colors.css"
+output_path = "~/docs/notizen/.obsidian/snippets/matugen.css"
+
+[templates.obsidian-schule]
+input_path = "~/.config/matugen/templates/obsidian-colors.css"
+output_path = "~/docs/schule/.obsidian/snippets/matugen.css"
+
+[templates.prismlauncher]
+input_path = "~/.config/matugen/templates/prismlauncher-colors.json"
+output_path = "~/.local/share/PrismLauncher/themes/Matugen/theme.json"
+
+[templates.qt5ct]
+input_path = "~/.config/matugen/templates/qtct-colors.conf"
+output_path = "~/.config/qt5ct/colors/matugen.conf"
+
+[templates.qt6ct]
+input_path = "~/.config/matugen/templates/qtct-colors.conf"
+output_path = "~/.config/qt6ct/colors/matugen.conf"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.starship]
+input_path = "~/.config/matugen/templates/starship-colors.toml"
+output_path = "~/.config/starship/starship.toml"
+
+[templates.vesktop-midnight]
+input_path = "~/.config/matugen/templates/vesktop-colors-midnight.css"
+output_path = "~/.config/vesktop/themes/matugen-colors-midnight.css"
+
+[templates.vesktop-system24]
+input_path = "~/.config/matugen/templates/vesktop-colors-sys24.css"
+output_path = "~/.config/vesktop/themes/matugen-colors-sys24.css"
+
+[templates.vscode-raw]
+input_path = "~/.config/matugen/templates/vscode-colors"
+output_path = "~/.cache/matugen/vscode-colors"
+
+[templates.vscode-json]
+input_path = "~/.config/matugen/templates/vscode-colors.json"
+output_path = "~/.cache/matugen/vscode-colors.json"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar-colors.css"
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar || true'
+
+[templates.yazi]
+input_path = "~/.config/matugen/templates/yazi-colors.toml"
+output_path = "~/.config/yazi/theme.toml"
+
+

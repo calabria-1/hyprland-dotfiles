@@ -1,0 +1,133 @@
+@import "colors.css";
+
+@define-color primary_container_fixed alpha(@primary_container, 0.8);
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#custom-arch {
+    background-color: @primary_container_fixed;
+    color: @primary;
+    font-size: 18px;
+
+    min-width: 30px;
+    padding: 0px 10px 0px 5px; /*Padding rechts ist größer, weil Font nach links gerückt ist*/
+    margin: 3px 5px 3px 10px;
+    border-radius: 25px;
+}
+
+#workspaces {
+    background-color: @primary_container_fixed;
+    border-radius: 25px;
+    padding: 0px 5px;
+    margin: 3px 5px;
+}
+
+#workspaces button {
+    min-width: 10px;
+    min-height: 0px;
+    padding: 0px 5px;
+    margin: 3px 5px;
+    border-radius: 999px;
+
+    color: @primary_container_fixed;
+    background-color: @primary;
+
+    transition: all 100ms ease-in-out;
+}
+
+#workspaces button.active { 
+    background-color: @primary;
+    color: @primary_container_fixed;
+    min-width: 25px;
+}
+
+#workspaces button.empty {
+    color: @outline;
+    background-color: @primary;
+}
+
+#workspaces button.active:hover {
+    min-width: 30px;
+}
+
+#workspaces button:hover {
+    min-width: 25px;
+}
+
+#clock {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 5px;
+    
+    border-radius: 25px;
+}
+
+#cpu {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 5px;
+    
+    border-radius: 25px;
+}
+
+#memory {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 5px;
+
+    border-radius: 25px;
+}
+
+#network {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 5px;
+
+    border-radius: 25px;
+}
+
+#pulseaudio {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 5px;
+
+    border-radius: 25px;
+}
+
+#custom-power-profile {
+    background-color: @primary_container_fixed;
+    color: @primary;
+
+    padding: 0px 10px;
+    margin: 3px 10px 3px 5px;
+
+    border-radius: 25px;
+}
+
+tooltip {
+    background-color: @primary_container_fixed;
+    border: 1px solid;
+    border-color: @primary;
+}
+
+tooltip label {
+    font-weight: 500;
+    color: @primary;
+}
